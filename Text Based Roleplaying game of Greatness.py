@@ -74,12 +74,13 @@ def combat(e_hp, e_name, p_weapon, e_dmg, p_wep_name, p_hp):
                     print ("John missed the", e_name, "with the", p_wep_name, "!")
             elif turn == "HEAL":
                 p_tp = p_tp + 1
-                if p_hp >= 300:
+                if p_hp >= 50:
                     print("You are already at or above Max Health")
-                elif p_hp < 300:
-                    heal_amount = rand.randint(1, 6)
+                elif p_hp < 50:
+                    heal_amount = rand.randint(1, 4)
                     p_hp + heal_amount
                     print ("John used scraps of cloth to heal himself for", heal_amount, "!")
+
         while e_tp < p_tp:
             e_tp = e_tp + 1
             # print("Enemy points:", e_tp)
@@ -95,6 +96,7 @@ def combat(e_hp, e_name, p_weapon, e_dmg, p_wep_name, p_hp):
     if e_hp <= 0 and p_hp > 0:
         print("The", e_name, "was killed by John!")
         return ("John Wins")
+        return
     elif p_hp <= 0 and e_hp > 0:
         print("John was mortally wounded, and died!")
         exit()
@@ -107,36 +109,46 @@ dig2 = rand.randint(0, 9)
 dig3 = rand.randint(0, 9)
 dig4 = rand.randint(0, 9)
 # ---------------------
-play_hp = 300
+play_hp = 50
 player_wep = knife()
-enemy_wep = knife()
 #combat(HP, "ENEMY NAME", player_wep, enemy_wep, "Player wep name", player's hp)
 # ---------------------
 print("John was a average man he loved taking hikes, exploring nature, and his desk job.")
-#time.sleep(3)
+time.sleep(3)
 print("One day John was out on a mountain trail enjoying his weekend off, when he encountered a cave.")
-#time.sleep(3)
+time.sleep(3)
 print("John ventured inside, not seeing the signs of recent human activity...")
-#time.sleep(3)
+time.sleep(3)
 c1 = input("Leaping from the shadows, a stranger in a ski mask, and heavy jacket screams and jabs at John! What does he do? (Attack, or Surrender): ")
 c1 = c1.upper()
 divide()
 if c1 == "ATTACK":
-    combat(20, "Masked Man", player_wep, enemy_wep, "knife", play_hp)
+    masked_wep = knife()
+    combat(20, "Masked Man", player_wep, masked_wep, "knife", play_hp)
 
 else:
     print("The masked man throws a burlap sack over John's head, and hits him...")
-    #time.sleep(2)
+    time.sleep(2)
     print("John awakens in darkness, with the sounds of a car around him...")
-    #time.sleep(2)
+    time.sleep(2)
     print("John quickly realizes that he is in a car's trunk.")
-    #time.sleep(2)
+    time.sleep(2)
     print("John hears voices coming around the car, and sees that he has a chance to escape by kicking the trunk open...")
-    #time.sleep(2)
+    time.sleep(2)
     c2 = input("What does John do?: (Wait, or Escape):")
     c2 = c2.upper()
-    if c2 == "Escape":
+    if c2 == "ESCAPE":
         print("John Kicks the trunk open with a loud THUD, as one of the gang members in knocked out. However one still stands...")
         divide()
-        combat(35, "Bouncer", player_wep, enemy_wep, "knife", play_hp)
-        combat(35, "Bouncer", player_wep, enemy_wep, "knife", play_hp)
+        bounce_wep = knife()
+        combat(35, "Bouncer", player_wep, bounce_wep, "knife", play_hp)
+        time.sleep(2)
+        print("John looks around him, and sees two options, a missive gothic mansion, or a dense dark wood")
+        c3 = input("Do you dare venture into the Mansion, or do you flee into the woods...(woods/house)")
+        c3.upper()
+        if c3 == "HOUSE":
+
+        else:
+            time.sleep(2)
+            print("John flees into the woods, and  runs for the next 2 hours. ")
+            print("When night falls in the woods on a full moon night, bad things wil emerge")
