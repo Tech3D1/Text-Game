@@ -10,3 +10,9 @@ He starts exploring the crypt, Something jumps out at him and gets kidnaped by a
 
 Story Chart: 
 https://app.mindmup.com/map/_free/2018/07/ac6c1ed08f5111e8a814972437028531
+
+Pycharm Windows:
+
+https://www.jetbrains.com/pycharm/download/#section=windows
+
+Click on the download button under community
