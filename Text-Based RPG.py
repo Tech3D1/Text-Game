@@ -89,6 +89,14 @@ def big_gun():
     damage = rand.randint(10, 30)
     return(damage)
 
+def old_mg():
+    damage = rand.randint(10, 15)
+    return(damage)
+
+def player_old_mg():
+    damage = rand.randint(20, 25)
+    return(damage)
+
 # ---------- Combat Functions ----------
 def combat(e_hp, e_name, p_weapon, e_dmg, p_wep_name, p_hp):
     e_tp = 0
@@ -298,7 +306,7 @@ def mansion():
                 time.sleep(2)
                 print("John: what do you want with me?")
                 time.sleep(2)
-                mansion3 = input("Mobster: You can do this peacefully or I can kill you! (Fight/Surrender)")
+                mansion3 = input("Mobster: You can do this peacefully or I can kill you! (Fight/Surrender): ")
                 mansion3 = mansion3.upper()
                 while mansion3 == "FIGHT":
                     player_wep = winchester_rifle()
@@ -307,7 +315,6 @@ def mansion():
                     print("John leaps to the  wall, and grabs a winchester rifle out of the display case.")
                     divide()
                     time.sleep(2)
-                    gunshot()
                     gunshot()
                     combat(45, "Big Mobster", big_gun(), player_wep, player_wep_name, play_hp)
                     divide()
@@ -429,6 +436,7 @@ def mansion():
                                 print("As John opens the safe, he finds a piece of paper with a 6 in bold text, and a 4 in the corner.")
                                 time.sleep(2)
                                 print("John leaves the room, and heads back into the hall.")
+                                tapestries = ""
                                 mpastdoor = ""
             while mpastdoor == "RDOOR":
                 print("John enters the right door, into a large armory.")
@@ -437,9 +445,44 @@ def mansion():
                 time.sleep(2)
                 print("The man stands up and grunts at John, loading his gun...")
                 divide()
-                combat(50, "Grunt", play_wep,)
-
-
+                gunshot()
+                combat(50, "Grunt", player_wep, old_mg(), player_wep_name, play_hp)
+                divide()
+                print("John takes the man's machine gun, and finds a letter in his coat.")
+                player_wep = player_old_mg()
+                player_wep_name = "Old Machine Gun"
+                print("The letter has a 8 with a subscript of 3 in the corner.")
+                mpastdoor = ""
+            while mpastdoor == "STAIRS":
+                print("John climbs the elaborate set of stairs, at the top he finds a barred iron door, with a code lock.")
+                quesstdoor = input("Does john have the combination? (YES/NO): ")
+                quesstdoor = quesstdoor.upper()
+                if quesstdoor == "YES":
+                    time.sleep(2)
+                    css1 = input("What is the first number: ")
+                    css1 = int(css1)
+                    time.sleep(2)
+                    css2 = input("What is the second number: ")
+                    css2 = int(css2)
+                    time.sleep(2)
+                    css3 = input("What is the third number: ")
+                    css3 = int(css3)
+                    time.sleep(2)
+                    css4 = input("What is the fourth number: ")
+                    css4 = int(css4)
+                    time.sleep(1)
+                    print("processing...")
+                    time.sleep(3)
+                    if css1 == 3 and css2 == 5 and css3 == 8 and css4 == 6:
+                        print("The door swings open, revealing a large board room. At the far end, sits a man in a tailored suit.")
+                        time.sleep(2)
+                        print("The Boss: Well Well Well... Look who finally made it... You thought you could kill my boys...")
+                        time.sleep(3)
+                        print("John: What do you want with me? HUH?")
+                        time.sleep(2)
+                        print("The Boss: You'll find out... When you're dead!")
+                        time.sleep(2)
+                        combat()
 
 # ---------------------
 dig1 = rand.randint(0, 9)
