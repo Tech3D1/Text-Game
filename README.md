@@ -27,3 +27,10 @@ Click on the download button under community
 
 Youtube to sound converter:
 https://www.youtubeto.com/hu/WAV.php
+
+DISCORDS:
+
+TECH3D
+#6908
+
+Nethernian
