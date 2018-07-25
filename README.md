@@ -1,4 +1,4 @@
-# Text-Game
+# Text Adventure Game
 
 This is our capstone project for GEMS III computer science.
 We chose a text adventure because it would be a challenge to our group.
@@ -14,6 +14,7 @@ USE THE README IN THE MASTER BRANCH
 THE WORKING BRANCH IS OLNY USED FOR IN PROGRESS PROGRAMS
 THE MASTER BRANCH IS FOR BACKUPS THAT WORK
 
+Info:
 
 Story Chart: 
 https://app.mindmup.com/map/_free/2018/07/711ac130901211e8a343ff499a4a7598
