@@ -24,4 +24,5 @@ https://www.jetbrains.com/pycharm/download/#section=windows
 
 Click on the download button under community
 
-
+Youtube to sound converter:
+https://www.youtubeto.com/hu/WAV.php
