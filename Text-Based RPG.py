@@ -257,7 +257,7 @@ def woods():
         time.sleep(3)
         werewolf_combat(200, player_wep, werewolf_claws(), play_wep_name, play_hp)
 
-def Mansion():
+def mansion():
     player_wep = knife()
     play_hp = 60
     player_wep_name = "Knife"
@@ -362,6 +362,84 @@ def Mansion():
         time.sleep(2)
         print("On either side of the staircase, there is a door.")
         time.sleep(2)
+        main_room = "TRUE"
+        while main_room == "TRUE":
+            mpastdoor = input("What does John do? (LDoor/RDoor/Stairs): ")
+            mpastdoor = mpastdoor.upper()
+            while mpastdoor == "LDOOR":
+                time.sleep(2)
+                print("Through the left door, there is a room with a safe, and 3 tapestries.")
+                time.sleep(1)
+                note_chek = input("In the center of the room, do you wish to check it? (YES/NO): ")
+                note_chek = note_chek.upper()
+                while note_chek == "YES":
+                    time.sleep(1)
+                    print("*************** NOTE ***************")
+                    print("*   The first digits: 3, and 5.    *")
+                    print("* The others are in a room each,   *")
+                    print("* At the top of the stairs enter!  *")
+                    print("************************************")
+                    note_chek = "NO"
+                else:
+                    time.sleep(2)
+                    print("Looking around the room there are 3 tapestries, and a safe.")
+                    time.sleep(2)
+                    tapestries = input("What would you like to examine? (Art/Safe): ")
+                    tapestries = tapestries.upper()
+                    while tapestries == "ART":
+                        time.sleep(2)
+                        checked = input("Each of the scenes depicted on the tapestries, are of nature. Which do you examine? (Sheep/Mountains/River/Back): ")
+                        checked = checked.upper()
+                        while checked == "SHEEP":
+                            time.sleep(2)
+                            print("The tapestry is a depiction of several sheep on a hill.")
+                            time.sleep(2)
+                            print("Towards the bottom of the art piece, a 6 with a sub-notation of 1 is stitched to the corner.")
+                            checked = ""
+                        while checked == "MOUNTAINS":
+                            time.sleep(2)
+                            print("The tapestry is a depiction of a vast mountain range.")
+                            time.sleep(2)
+                            print("Towards the bottom of the art piece, a 3 with a sub-notation of 2 is stitched to the corner.")
+                            checked == ""
+                        while checked == "RIVER":
+                            time.sleep(2)
+                            print("The Tapestry is a depiction of a wide river, with a grassy bank.")
+                            time.sleep(2)
+                            print("At the bottom of the tapestry, there is a 8 with a sub notation of 3")
+                            checked == ""
+                        while checked == "BACK":
+                            mpastdoor = "LDOOR"
+                    while tapestries == "SAFE":
+                        time.sleep(2)
+                        print("John approaches the safe to find a 3 part code lock.")
+                        codelck = input("Do you want to attempt to enter the code?: (YES/NO): ")
+                        codelck = codelck.upper()
+                        if codelck == "YES":
+                            cd1 = input("What is the first number?: ")
+                            cd1 = int(cd1)
+                            time.sleep(2)
+                            cd2 = input("What is the second number?: ")
+                            cd2 = int(cd2)
+                            time.sleep(2)
+                            cd3 = input("What is the third number?: ")
+                            cd3 = int(cd3)
+                            if cd1 == 6 and cd2 == 3 and cd3 == 8:
+                                time.sleep(2)
+                                print("As John opens the safe, he finds a piece of paper with a 6 in bold text, and a 4 in the corner.")
+                                time.sleep(2)
+                                print("John leaves the room, and heads back into the hall.")
+                                mpastdoor = ""
+            while mpastdoor == "RDOOR":
+                print("John enters the right door, into a large armory.")
+                time.sleep(2)
+                print("Looking around inside this room, John a large man polishing an antique machine gun.")
+                time.sleep(2)
+                print("The man stands up and grunts at John, loading his gun...")
+                divide()
+                combat(50, "Grunt", play_wep,)
+
+
 
 # ---------------------
 dig1 = rand.randint(0, 9)
@@ -383,7 +461,7 @@ c1 = input("Leaping from the shadows, a stranger in a ski mask, and heavy jacket
 c1 = c1.upper()
 divide()
 if c1 == "ATTACK":
-   Mansion()
+   mansion()
 
    #masked_wep = knife()
     #combat(20, "Masked Man", player_wep, masked_wep, "knife", play_hp)
@@ -412,7 +490,7 @@ else:
         if c3 == "HOUSE":
             time.sleep(2)
             print("HOUSE PLACEHOLDER")
-            Mansion()
+            mansion()
 
         else:
             time.sleep(2)
@@ -444,4 +522,4 @@ else:
             else:
                 time.sleep(2)
                 print("John decides to enter the house to extract his revenge...")
-                Mansion()
+                mansion()
