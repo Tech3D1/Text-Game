@@ -16,7 +16,7 @@ THE MASTER BRANCH IS FOR BACKUPS THAT WORK
 
 
 Story Chart: 
-https://app.mindmup.com/map/_free/2018/07/853679e0900b11e8aab6896f8ed44a2f
+https://app.mindmup.com/map/_free/2018/07/711ac130901211e8a343ff499a4a7598
 
 Pycharm Windows:
 
